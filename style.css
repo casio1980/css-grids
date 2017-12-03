@@ -1,0 +1,47 @@
+body { 
+    font-size: 300%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #336;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 50px 50px 100px auto;
+    /* grid-gap: 5px; */
+    height: 95vh;
+    grid-template-areas:
+        "header  header"
+        "toolbar toolbar"
+        "palette diagram"
+        "props   diagram"
+        ".       diagram"
+}
+.wrapper > div:nth-child(1) {
+    grid-area: header;
+    background: #ff4a4a; /* Цвет фона */
+}
+.wrapper > div:nth-child(2) {
+    grid-area: toolbar;
+    background: #fff34a; /* Цвет фона */
+}
+.wrapper > div:nth-child(3) {
+    grid-area: palette;
+    background: #6eff4a; /* Цвет фона */
+}
+.wrapper > div:nth-child(4) {
+    grid-area: props;
+    background: #4affff; /* Цвет фона */
+}
+.wrapper > div:nth-child(5) {
+    grid-area: diagram;
+    background: #ff4ae7; /* Цвет фона */
+}
+.wrapper > div:nth-child(6) {
+    background: #4a6bff; /* Цвет фона */
+}
+.settings {
+    height: 800px;
+}
+.diagram {
+    /* min-height: calc(100vh - 150px); */
+}
